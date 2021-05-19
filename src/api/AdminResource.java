@@ -11,12 +11,9 @@ import java.util.List;
 
 public class AdminResource {
 
-    Collection<IRoom> rooms = new ArrayList<IRoom>();
-    Collection<Customer> customer = new ArrayList<Customer>();
-
+    //Admin Resource
     private static AdminResource adminResource = null;
-    private AdminResource() {
-    }
+    private AdminResource() {}
     public static AdminResource getInstance() {
         if (null == adminResource) {
             adminResource = new AdminResource();
@@ -25,6 +22,7 @@ public class AdminResource {
     }
 
     //Rooms
+    Collection<IRoom> rooms = new ArrayList<IRoom>();
     public void addRoom(List<IRoom> rooms) {
         this.rooms.addAll(rooms);
     }
@@ -34,26 +32,21 @@ public class AdminResource {
     }
 
     //Customer
+    Collection<Customer> customer = new ArrayList<Customer>();
 
-
+    public Collection<Customer> getAllCustomer() {
+        return customer;
+    }
     public void addCustomer(List<Customer> customer) {
         this.customer.addAll(customer);
     }
     public Customer getCustomer(String email) {
         for (Customer temp : customer) {
             if (temp.getEmail().equals(email)) {
-
             }
         }
         return null;
     }
 
-    public Collection<Customer> getAllCustomer() {
-        return customer;
-    }
-
-
-    public void displayAllReservation()
-    {}
 
 }
