@@ -1,44 +1,48 @@
 package api;
 
-import model.Customer;
-import model.IRoom;
+
+
+
 import model.Reservation;
+import service.HotelApplication;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 public class HotelResource {
 
-    Collection<Customer> customer = new ArrayList<>();
-
+    //Hotel Resource
     private static HotelResource hotelResource = null;
 
-            private HotelResource() {
-            }
+    private HotelResource() {
+    }
 
-            public static HotelResource getInstance() {
+    public static HotelResource getInstance() {
         if (null == hotelResource) {
             hotelResource = new HotelResource();
         }
         return hotelResource;
-            }
-
-    public Customer getCustomer(String email) {
-        return null;
     }
 
-    public void createACustomer(String email, String firstName, String lastName) {
+    //Reservation
+    Collection<Reservation> reservations = new ArrayList<Reservation>();
+
+    public Collection<Reservation> getAllReservation() {
+        return reservations;
+    }
+
+    public void addReservation(List<Reservation> reservationList) {
+        this.reservations.addAll(reservationList);
+    }
+}
+
+
+   /* public Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date CheckOutDate) {
 
     }
 
-    public IRoom getRoom(String roomNUmber) {
-        return null;
-    }
-
-    public Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date CheckOutDate) {
-        return null;
-    }
 
     public Collection<Reservation>
     getCustomerReservations(String customerEmail) {
@@ -49,3 +53,5 @@ public class HotelResource {
         return null;
     }
 }
+*/
+
