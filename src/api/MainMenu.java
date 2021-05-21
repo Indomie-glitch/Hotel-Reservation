@@ -31,30 +31,6 @@
                  switch (selection) {
                      case 1 -> {
                          NewReservation.start();
-
-                  /* System.out.println("Enter CheckIn Date mm/dd/yyyy example 12/12/1212");
-                    String CheckIn = (scanner.next());
-                   System.out.println("Enter CheckOut Date mm/dd/yyyy example 11/11/1111");
-                    String Checkout = (scanner.next());
-                   //All rooms
-                    System.out.println("All the Rooms");
-                    Collection<IRoom> rooms = AdminResource.getInstance().getAllRoom();
-                    for(IRoom room : rooms) {
-                        System.out.print("The Room Number " + room.getRoomNumber() + "   ");
-                        System.out.print("The Price of the Room " + room.getRoomPrice() + "   ");
-                        System.out.print("Double or Single " + room.getRoomType() + "   || \n");
-                    }
-                    System.out.println("Do you want to book a room, Yes or No");
-                    String book = (scanner.next());
-                    System.out.println("Do you have an account with us, Yes or No");
-                    String account = (scanner.next());
-                    //EMAIL
-                System.out.println("What is your Email");
-                    String email = (scanner.next());
-                    System.out.println("What is the Room Number you want to reserve");
-                    String rooomnumber = (scanner.next());
-                    System.out.println("YOUR RESERVATION  " + CheckIn + "\n" + Checkout + "\n" + book + "\n" + account + "\n" + email + "\n" + rooomnumber);
-*/
                      }
                      case 2 -> {
                          System.out.println("What is your Email");
@@ -75,7 +51,7 @@
                          newCustomer.start();
                      }
                      case 4 -> {
-                         System.out.println("Traveling to Admin Menu4");
+                         System.out.println("Traveling to Admin Menu");
                          AdminMenu adminMenu = new AdminMenu();
                          adminMenu.start();
                      }
