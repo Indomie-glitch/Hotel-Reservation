@@ -1,12 +1,12 @@
  package api;
 
+ import model.Customer;
  import model.IRoom;
  import model.NewCustomer;
 
  import java.util.Collection;
  import java.util.Scanner;
 
- import model.NewReservation;
  import model.Reservation;
 
  public class MainMenu {
@@ -30,7 +30,7 @@
                  int selection = Integer.parseInt(scanner.next());
                  switch (selection) {
                      case 1 -> {
-                         NewReservation.start();
+                         Reservation.start();
                      }
                      case 2 -> {
                          System.out.println("What is your Email");
@@ -47,8 +47,7 @@
                      }
                      case 3 -> {
                          //Create an account
-                         NewCustomer newCustomer = new NewCustomer();
-                         newCustomer.start();
+                         Customer.start();
                      }
                      case 4 -> {
                          System.out.println("Traveling to Admin Menu");

@@ -4,18 +4,18 @@ public  class Room implements IRoom {
     private Double roomPrice;
     private String roomNumber;
     private RoomType roomType;
-    private boolean availability;
+    private boolean booked;
 
     public Double getRoomPrice() {
         return roomPrice;
     }
 
-    public boolean isAvailability() {
-        return availability;
+    public boolean isBooked() {
+        return booked;
     }
 
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
+    public void setBooked(boolean availability) {
+        this.booked = availability;
     }
 
     public RoomType getRoomType() {
@@ -40,6 +40,6 @@ public  class Room implements IRoom {
     }
 
     public boolean isFree() {
-        return availability;
+        return booked;
     }
 }
